@@ -5,6 +5,8 @@ vi:
       help: "Hỗ trợ"
       about: "Giới thiệu"
       base_title: " | Ruby on Rails Tutorial Sample App"
+  helper:
+    base_title: "Ruby on Rails Tutorial Sample App"
   static_page:
     home:
       sample_app: "Ứng dụng mẫu"
