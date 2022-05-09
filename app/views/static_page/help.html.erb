@@ -1,0 +1,7 @@
+<%= provide(:title, t("layout.header.help")) %>
+<h1><%= t("layout.header.help") %></h1>
+<p>
+  <%= t("static_page.help.content",
+  help:link_to(t("static_page.help.rails_help"), "https://github.com/learnenough/rails_tutorial_sample_app_7th_ed/blob/main/HELP.md"),
+  book:link_to(t("static_page.help.rails_book"), "https://www.railstutorial.org/book")).html_safe %>
+</p>
