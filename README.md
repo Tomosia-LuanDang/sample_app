@@ -48,3 +48,13 @@ Rails version: 6.1.5
 |CONNECT|Thiết lập một kết nối tới server theo URI.|
 |OPTIONS|Mô tả các tùy chọn giao tiếp cho resource.|
 |TRACE|Thực hiện một bài test loop – back theo đường dẫn đến resource.|
+
+## 4.
+## 5.
+## 6.
+## 6.
+## 7.
+## 8.
+## 9.
+## 10.
+## 11.
