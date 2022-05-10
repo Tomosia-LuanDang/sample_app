@@ -49,12 +49,12 @@ Rails version: 6.1.5
 |OPTIONS|Mô tả các tùy chọn giao tiếp cho resource.|
 |TRACE|Thực hiện một bài test loop – back theo đường dẫn đến resource.|
 
-## 4.
-## 5.
-## 6.
-## 6.
-## 7.
-## 8.
+## 4. Router path
+## 5. Router url
+## 6. enmpty?, blank?, nil?
+## 6. gem config
+## 7. Webpack
+## 8. Render partial
 ## 9.
 ## 10.
 ## 11.
