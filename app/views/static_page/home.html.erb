@@ -1,0 +1,6 @@
+<%= provide(:title, t("layout.header.home")) %>
+<h1><%= t("static_page.home.sample_app") %></h1>
+<p>
+  <%= t("static_page.home.content",
+  link:link_to(t("static_page.home.rails_tutorial"), "http://www.railstutorial.org/")).html_safe %>
+</p>
