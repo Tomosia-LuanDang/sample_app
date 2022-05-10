@@ -21,7 +21,6 @@ Rails version: 6.1.5
 |View|Là nơi chứa giao diện, hiển thị dữ liệu, là nơi người dùng tương tác với hệ thống|
 |Controller|Tiếp nhận các yêu cầu xử lý từ người dùng, tương tác với Model để lấy dữ liệu và tương tác với View để trả về giao diện hiển thị cho browser|
 
-
 ## 2. RESTful
 - Là một tiêu chuẩn dùng trong việc thiết kế API cho các ứng dụng web (thiết kế Web services) để tiện cho việc quản lý các resource. Nó chú trọng vào tài nguyên hệ thống (tệp văn bản, ảnh, âm thanh, video, hoặc dữ liệu động…), bao gồm các trạng thái tài nguyên được định dạng và được truyền tải qua HTTP.
 - Các phương thức trong RESTful:<br>
@@ -49,12 +48,68 @@ Rails version: 6.1.5
 |OPTIONS|Mô tả các tùy chọn giao tiếp cho resource.|
 |TRACE|Thực hiện một bài test loop – back theo đường dẫn đến resource.|
 
-## 4. Router path
+## 4. empty?, blank?, nil?, present?
+### empty?
+Là một function có sẵn của String, Hash, Array
+`.empty?` trả về `true` nếu giá trị của biến là rỗng
+```ruby
+"".empty?
+# => true
+[].empty?
+# => true
+{}.empty?
+# => true
+" ".empty?
+# => false
+[nil].empty?
+# => false
+```
+
+### blank?
+Là một function trong rails
+```ruby
+"".blank?
+# => true
+[].blank?
+# => true
+{}.blank?
+# => true
+" ".blank?
+# => true
+[nil].blank?
+# => false
+```
+
+### nil?
+Là một hàm của Object, nên tất cả các object kế thừa từ Object mặc định đều có hàm nil?<br>
+Chỉ có nil object trả về true khi gọi nil?
+```ruby
+nil.nil?
+# => true
+```
+
 ## 5. Router url
-## 6. enmpty?, blank?, nil?
+## 6. Router path
 ## 6. gem config
 ## 7. Webpack
 ## 8. Render partial
-## 9.
-## 10.
-## 11.
+## 9. Router resource vs router resources
+## 10. Router collection
+## 11. find vs find_by
+## 12. Tác dụng của folder helper
+## 13. Callback là gì?
+## 14. Tại sao phải sử dụng migration
+## 15. form_for
+## 16. authenticity_token
+
+Khi user views một biểu mẫu trong form để tạo, sửa, xóa tài nguyên, Rails sẽ sinh ra ngẫu nhiên 1 `authenticity_token`, lưu nó trong session và đặt nó vào một trường ẩn trong form.
+```html
+<input name="authenticity_token" type="hidden"
+value="NNb6+J/j46LcrgYUC60wQ2titMuJQ5lLqyAbnbAUkdo=" />
+```
+Khi user ấn submit, Rails sẽ tìm kiếm `authenticity_token` và so sánh nó với `authenticity_token` đã được lưu trong session. Nếu giống nhau thì yêu cầu được tiếp tục.<br>
+=> Rails sử dụng nó để ngăn chặn tấn công [cross-site request forgery (CSRF)](https://stackoverflow.com/questions/941594/understanding-the-rails-authenticity-token) vào trang web.
+
+## 17. Tấn công CSRF/XSS
+## 18. Strong Parameters
+## 19. lazy_lookup

@@ -1,6 +1,13 @@
 en:
   general:
+    eng: "EN"
+    vie: "VI"
     rails_tutorial: "Ruby on Rails Tutorial"
+  flash:
+    signup_success: "Create Account Success"
+  error:
+    contains: "The form contains"
+    errors: "error"
   layout:
     header:
       home: "Home"
@@ -40,4 +47,5 @@ en:
   user:
     new:
       signup: "Sign up"
-      content: "This will be a signup page for new users."
+      confirmination: "Confirmation"
+      create_acc: "Create my account"
