@@ -1,17 +1,28 @@
 en:
+  general:
+    rails_tutorial: "Ruby on Rails Tutorial"
   layout:
     header:
       home: "Home"
       help: "Help"
-      about: "About"
+      login: "Login"
+      sample_app: "Sample App"
       base_title: " | Ruby on Rails Tutorial Sample App"
+    footer:
+      about: "About"
+      contact: "Contact"
+      news: "News"
+      content: "The %{tutorial} by %{author}"
+      author: "Michael Hartl"
   helper:
     base_title: "Ruby on Rails Tutorial Sample App"
   static_page:
     home:
       sample_app: "Sample App"
+      welcome: "Welcome to the Sample App"
       content: "This is the home page for the %{link} sample application."
       rails_tutorial: "Ruby on Rails Tutorial"
+      signup_now: "Sign up now!"
     help:
       content: "Get help on the Ruby on Rails Tutorial at %{help} To get help on this sample app, see the %{book}"
       rails_help: "Rails Tutorial help page."
@@ -23,3 +34,10 @@ en:
       book: "book"
       screencast: "screencast series"
       rails: "Ruby on Rails"
+    contact:
+      content: "Contact the Ruby on Rails Tutorial about the sample app at the %{contact_page}."
+      contact_page: "contact page"
+  user:
+    new:
+      signup: "Sign up"
+      content: "This will be a signup page for new users."

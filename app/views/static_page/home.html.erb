@@ -1,6 +1,8 @@
 <%= provide(:title, t("layout.header.home")) %>
-<h1><%= t("static_page.home.sample_app") %></h1>
-<p>
-  <%= t("static_page.home.content",
-  link:link_to(t("static_page.home.rails_tutorial"), "http://www.railstutorial.org/")).html_safe %>
-</p>
+<div class="center jumbotron mt-2">
+  <h1><%= t "static_page.home.welcome" %></h1>
+  <h2>
+    <%= t("static_page.home.content", link:link_to(t("static_page.home.rails_tutorial"), "http://www.railstutorial.org/")).html_safe %>
+  </h2>
+  <%= link_to t("static_page.home.signup_now"), signup_path, class: "btn btn-lg btn-primary" %>
+</div>

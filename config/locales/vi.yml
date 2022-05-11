@@ -1,25 +1,39 @@
 vi:
+  general:
+    rails_tutorial: "Ruby on Rails Tutorial"
   layout:
     header:
       home: "Trang chủ"
       help: "Hỗ trợ"
-      about: "Giới thiệu"
+      login: "Đăng nhập"
+      sample_app: "Ứng dụng mẫu"
       base_title: " | Ruby on Rails Tutorial Sample App"
+    footer:
+      about: "Giới thiệu"
+      contact: "Liên hệ"
+      news: "Tin tức"
+      content: "Cuốn %{tutorial} của %{author}"
+      author: "Michael Hartl"
   helper:
     base_title: "Ruby on Rails Tutorial Sample App"
   static_page:
     home:
       sample_app: "Ứng dụng mẫu"
+      welcome: "Chào mừng đến với Ứng dụng mẫu"
       content: "Đây là trang chủ của %{link} cho ứng dụng mẫu."
       rails_tutorial: "Hướng dẫn Ruby on Rails"
+      signup_now: "Đăng ký ngay!"
     help:
       content: "Nhận trợ giúp về hướng dẫn Ruby on Rails tại %{help} Để nhận trợ giúp về ứng dụng mẫu này, xem %{book}"
       rails_help: "Rails Tutorial help page."
       rails_book: "Ruby on Rails Tutorial book"
     about:
-      content: "%{tutorial},là một phần của series hướng dẫn %{learnenough}, là một %{book} và %{screencast} dạy phát triển web với %{rails}. Đây là ứng dụng mẫu cho hướng dẫn."
+      content: "Cuốn %{tutorial},là một phần của series hướng dẫn %{learnenough}, là một %{book} và %{screencast} dạy phát triển web với %{rails}. Đây là ứng dụng mẫu cho hướng dẫn."
       rails_tutorial: "Hướng dẫn Ruby on Rails"
       learnenough: "Learn Enough"
       book: "cuốn sách"
       screencast: "hàng loạt video"
       rails: "Ruby on Rails"
+    contact:
+      content: "Liên hệ với Ruby on Rails Tutorial về ứng dụng mẫu tại %{contact_page}."
+      contact_page: "trang liện hệ"
