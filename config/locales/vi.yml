@@ -1,6 +1,13 @@
 vi:
   general:
+    eng: "EN"
+    vie: "VI"
     rails_tutorial: "Ruby on Rails Tutorial"
+  flash:
+    signup_success: "Tạo tài khoản thành công"
+    errors: "lỗi"
+  error:
+    contains: "Biểu mẫu chứa"
   layout:
     header:
       home: "Trang chủ"
@@ -37,3 +44,8 @@ vi:
     contact:
       content: "Liên hệ với Ruby on Rails Tutorial về ứng dụng mẫu tại %{contact_page}."
       contact_page: "trang liện hệ"
+  user:
+    new:
+      signup: "Đăng ký"
+      confirmination: "Xác nhận"
+      create_acc: "Tạo tài khoản của tôi"
