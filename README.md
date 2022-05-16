@@ -21,7 +21,9 @@
 >[17. Tấn công CSRF/XSS](#attack-csrf)<br>
 >[18. Strong Parameters](#strong-param)<br>
 >[19. Session](#session)<br>
->[20. Update attribute](#update-attribute)<br>
+>[20. Cookies](#cookies)<br>
+>[21. Local stories](#local-stories)<br>
+>[22. Update attribute](#update-attribute)<br>
 
 
 
@@ -182,4 +184,47 @@ Khi user ấn submit, Rails sẽ tìm kiếm `authenticity_token` và so sánh n
 <a id="attack-csrf"><h2>17. Tấn công CSRF/XSS</h2></a>
 <a id="strong-param"><h2>18. Strong Parameters</h2></a>
 <a id="session"><h2>19. Session</h2></a>
-<a id="update-attribute"><h2>20. Update attribute</h2></a>
+
+**Session** là phiên làm việc. Nó là cách đơn giản để lưu trữ 1 biến và khiến biến đó có thể tồn tại từ trang này sang trang khác, session sẽ hết hạn khi người dùng kết thúc phiên làm việc hoặc đóng trình duyệt.
+
+**Hoạt động:**<br>
+Session khi sinh ra được lưu trên 1 file có tên dài dòng, khó đoán và được tạo ngẫu nhiên là session id trên máy chủ, và đồng thời ở máy client cũng có 1 cookie sinh ra có nội dung (hay giá trị) đúng như session id (để có thể so khớp session nào là của client nào)
+
+Ví dụ, như trong bài tập sample_app:
+
+1. Khi gọi session[:current_user_id] = 1, session này không tồn tại
+
+2. Rails sẽ tạo bản ghi mới trong session với Session ID ngẫu nhiên (ví dụ: 5c3a6f2062c31c9a807ce63d59fdc1e3).
+
+3. Nó sẽ lưu trữ {current_user_id: 1} (được mã hóa Base64) trong data attribute của bản ghi đó.
+
+4. Nó sẽ trả lại Session ID được tạo, 5c3a6f2062c31c9a807ce63d59fdc1e3, cho trình duyệt bằng cách sử dụng Set-cookie.
+
+Tiếp tục request đến một trang khác:
+
+1. Trình duyệt sẽ gửi cùng một cookie đó cho ứng dụng, sử dụng Cookie: header. VD: (Cookie: _my_app_session=5c3a6f2062c31c9a807ce63d59fdc1e3; path=/; HttpOnly)
+
+2. Khi gọi session[:current_user_id]
+
+3. Ứng dụng lấy ra Session ID từ cookie, và tìm thấy bản ghi của Session ID trong bảng Session.
+
+4. Sau đó, nó trả về current_user_id trong data attribute của bản ghi đó.
+
+<a id="cookies"><h2>20. Cookies</h2></a>
+
+**Cookie** là một phần dữ liệu được lưu trên máy khách. Mỗi khi máy khách gửi một yêu cầu tới máy chủ nào đó, thì nó sẽ gửi phần dữ liệu được lưu trong cookie tương ứng với máy chủ đó.
+
+Trong Cookie có một số thông số sau:
+
+Địa chỉ URL mà trình duyệt sẽ gửi cookie tới<br>
+Thời gian hết hạn của cookie<br>
+Các cặp biến: giá trị được lưu trữ liên tục<br>
+
+**Hoạt động:**
+- Khác với dữ liệu gửi từ form (POST hay GET) thì cookies sẽ được trình duyệt tự động gửi đi theo mỗi lần truy cập lên máy chủ.
+- Trong quá trình làm việc, cookie có thể bị thay đổi giá trị. Cookie sẽ bị vô hiệu hoá nếu cửa sổ trình duyệt điều khiển cookie đóng lại và cookie hết thời gin có hiệu lực.
+- Theo mặc định, thời gian “sống” của cookies là tồn tại cho đến khi cửa sổ trình duyệt sử dụng cookies bị đóng. Tuy nhiên ta có thể thiết lập tham số thời gian để cookie có thể sống lâu hơn. Vì vậy, cookie sẽ hoạt động ngay cả khi người dùng đóng trình duyệt hay không.
+- Ví dụ như chế độ Remember Email & Password trong bài tập sample_app này.
+
+<a id="local-stories"><h2>21. Local stories</h2></a>
+<a id="update-attribute"><h2>22. Update attribute</h2></a>

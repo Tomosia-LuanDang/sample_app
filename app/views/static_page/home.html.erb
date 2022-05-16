@@ -4,5 +4,7 @@
   <h2>
     <%= t("static_page.home.content", link:link_to(t("static_page.home.rails_tutorial"), "http://www.railstutorial.org/")).html_safe %>
   </h2>
-  <%= link_to t("static_page.home.signup_now"), signup_path, class: "btn btn-lg btn-primary" %>
+  <% unless logged_in? %>
+    <%= link_to t("static_page.home.signup_now"), signup_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
 </div>

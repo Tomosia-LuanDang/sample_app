@@ -54,5 +54,8 @@ en:
       signup: "Sign up"
       confirmination: "Confirmation"
       create_acc: "Create my account"
+  session:
+    new:
       new_user: "New User?"
       sign_up_now: "Sign up now!"
+      remember_me: "Remember me on this computer"

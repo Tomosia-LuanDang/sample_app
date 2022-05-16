@@ -54,5 +54,8 @@ vi:
       signup: "Đăng ký"
       confirmination: "Xác nhận"
       create_acc: "Tạo tài khoản của tôi"
+  session:
+    new:
       new_user: "Tài khoản mới?"
       sign_up_now: "Đăng ký ngay!"
+      remember_me: "Nhớ tài khoản của tôi"

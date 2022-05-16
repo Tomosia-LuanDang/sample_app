@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def new
-    @user = User.new
+    logged_in? ? redirect_to(root_url) : @user = User.new
   end
 
   def show
