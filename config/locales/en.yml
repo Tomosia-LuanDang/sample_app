@@ -1,4 +1,7 @@
 en:
+  will_paginate:
+    previous_label: "&#8592; Previous"
+    next_label: "Next &#8594;"
   general:
     eng: "EN"
     vie: "VI"
@@ -6,6 +9,9 @@ en:
   flash:
     signup_success: "Create Account Success"
     email_password_invalid: "Invalid email/password combination"
+    update_success: "Update success"
+    plaese_login: "Please log in."
+    user_del: "User deleted"
   error:
     contains: "The form contains"
     errors: "error"
@@ -18,6 +24,7 @@ en:
       profile: "Profile"
       setting: "Setting"
       account: "Account"
+      users: "Users"
       sample_app: "Sample App"
       base_title: " | Ruby on Rails Tutorial Sample App"
     footer:
@@ -54,6 +61,16 @@ en:
       signup: "Sign up"
       confirmination: "Confirmation"
       create_acc: "Create my account"
+    edit:
+      title: "Edit user"
+      update_profile: "Update your profile"
+      confirmation: "Confirmation"
+      save_change: "Save changes"
+      change: "change"
+    delete: "Delete"
+    you_sure: "You sure?"
+    index:
+      title: "All users"
   session:
     new:
       new_user: "New User?"

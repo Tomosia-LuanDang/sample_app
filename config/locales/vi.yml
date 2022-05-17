@@ -1,4 +1,7 @@
 vi:
+  will_paginate:
+    previous_label: "&#8592; Trước"
+    next_label: "Sau &#8594;"
   general:
     eng: "EN"
     vie: "VI"
@@ -6,9 +9,12 @@ vi:
   flash:
     signup_success: "Tạo tài khoản thành công"
     email_password_invalid: "Email/mật khẩu không hợp lệ"
-    errors: "lỗi"
+    update_success: "Cập nhật thành công"
+    plaese_login: "Hãy đăng nhập."
+    user_del: "Đã xóa người dùng"
   error:
     contains: "Biểu mẫu chứa"
+    errors: "lỗi"
   layout:
     header:
       home: "Trang chủ"
@@ -18,6 +24,7 @@ vi:
       profile: "Hồ sơ"
       setting: "Cài đặt"
       account: "Tài khoản"
+      users: "Người dùng"
       sample_app: "Sample App"
       base_title: " | Ruby on Rails Tutorial Sample App"
     footer:
@@ -54,6 +61,16 @@ vi:
       signup: "Đăng ký"
       confirmination: "Xác nhận"
       create_acc: "Tạo tài khoản của tôi"
+    edit:
+      title: "Cập nhật tài khoản"
+      update_profile: "Cập nhật tài khoản của bạn"
+      confirmation: "Xác nhận"
+      save_change: "Lưu thay đổi"
+      change: "thay đổi"
+    delete: "Xóa"
+    you_sure: "Bạn có chắc chắn xóa?"
+    index:
+      title: "Tất cả người dùng."
   session:
     new:
       new_user: "Tài khoản mới?"
