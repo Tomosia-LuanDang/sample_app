@@ -16,14 +16,15 @@
 >[12. Tác dụng của folder helper](#helper)<br>
 >[13. Callback là gì?](#callback)<br>
 >[14. Tại sao phải sử dụng migration](#migration)<br>
->[15. form_for](#form_for)<br>
+>[15. form_for, form_tag, form_with](#form_for)<br>
 >[16. authenticity_token](#authenticity_token)<br>
 >[17. Tấn công CSRF/XSS](#attack-csrf)<br>
 >[18. Strong Parameters](#strong-param)<br>
 >[19. Session](#session)<br>
 >[20. Cookies](#cookies)<br>
->[21. Local stories](#local-stories)<br>
->[22. Update attribute](#update-attribute)<br>
+>[21. Local storage](#local-stories)<br>
+>[22. Session storage](#session-stories)<br>
+>[23. Update attribute](#update-attribute)<br>
 
 
 
@@ -77,6 +78,7 @@ Rails version: 6.1.5
 |TRACE|Thực hiện một bài test loop – back theo đường dẫn đến resource.|
 
 <a id="empty-blank"><h2>4. empty?, blank?, nil?, present?</h2></a>
+
 ### empty?
 Là một function có sẵn của String, Hash, Array
 `.empty?` trả về `true` nếu giá trị của biến là rỗng
@@ -170,7 +172,7 @@ VD|
 <a id="helper"><h2>12. Tác dụng của folder helper</h2></a>
 <a id="callback"><h2>13. Callback là gì?</h2></a>
 <a id="migration"><h2>14. Tại sao phải sử dụng migration</h2></a>
-<a id="form_for"><h2>15. form_for</h2></a>
+<a id="form_for"><h2>15. form_for, form_tag, form_with</h2></a>
 <a id="authenticity_token"><h2>16. authenticity_token</h2></a>
 
 Khi user views một biểu mẫu trong form để tạo, sửa, xóa tài nguyên, Rails sẽ sinh ra ngẫu nhiên 1 `authenticity_token`, lưu nó trong session và đặt nó vào một trường ẩn trong form.
@@ -226,5 +228,32 @@ Các cặp biến: giá trị được lưu trữ liên tục<br>
 - Theo mặc định, thời gian “sống” của cookies là tồn tại cho đến khi cửa sổ trình duyệt sử dụng cookies bị đóng. Tuy nhiên ta có thể thiết lập tham số thời gian để cookie có thể sống lâu hơn. Vì vậy, cookie sẽ hoạt động ngay cả khi người dùng đóng trình duyệt hay không.
 - Ví dụ như chế độ Remember Email & Password trong bài tập sample_app này.
 
-<a id="local-stories"><h2>21. Local stories</h2></a>
-<a id="update-attribute"><h2>22. Update attribute</h2></a>
+**Sự khác nhau giữa cookie và session:**
+
+||Cookie|Session|
+|:--|:---|:---|
+|Nơi lưu trữ|Cookie được lưu trữ trên trình duyệt của người dùng.|Session không được lưu trữ trong trình duyệt của người dùng.|
+|Nơi lưu trữ dữ liệu |Dữ liệu cookie được lưu trữ ở phía máy khách.|Dữ liệu session được lưu trữ ở phía máy chủ.|
+|Thời gian tồn tại|Dữ liệu cookie tồn tại cho đến khi hết hạn.|Sau khi đóng trình duyệt sẽ mất thông tin session.|
+|Bảo mật|Dữ liệu cookie dễ dàng sửa đổi khi chúng được lưu trữ ở phía khách hàng.|Dữ liệu session không dễ dàng sửa đổi vì chúng được lưu trữ ở phía máy chủ.|
+|Lượng data truyền tải|Tất cả các cookie hiện có của website|Chỉ file cookie chứa session id|
+
+<a id="local-stories"><h2>21. Local storage</h2></a>
+
+**Giới thiệu:**
+- Được lưu trữ trên trình duyệt của người dùng
+- Khả năng lưu trữ vô thời hạn
+- Lưu trữ được 5MB dữ liệu
+- Không gửi thông tin lên server như Cookie nên bảo mật tốt hơn.
+- Dữ liệu có thể chia sẻ giữa các tab, các cửa sổ cùng lúc nếu nó có chung nguồn gốc hay còn gọi là "same origin" (bao gồm 3 thành phần domain/port/protocol).
+<a id="session-stories"><h2>22. Session storage</h2></a>
+
+**Giới thiệu:**<br>
+**Session Storage** cũng giống như **local Storage**, nhưng chỉ khác về thời gian tồn tại và khả năng chia sẻ dữ liệu giữa các tab:
+- Được lưu trữ trên trình duyệt của người dùng
+- Tồn tại cho đến khi người dùng đóng tab, đóng trình duyệt.
+- Lưu trữ được 5MB dữ liệu
+- Dữ liệu không được gửi đi đến server thông qua các request header.
+- Dữ liệu chỉ tồn tại trong tab trình duyệt hiện tại, một tab khác dù mở cùng một trang nhưng nó sẽ có bộ nhớ khác.
+- Dữ liệu vẫn tồn tại khi tải lại trang
+<a id="update-attribute"><h2>23. Update attribute</h2></a>

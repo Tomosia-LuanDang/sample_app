@@ -22,9 +22,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      log_in @user
-      flash[:success] = t "flash.signup_success"
-      redirect_to @user
+      UserMailer.account_activation(@user).deliver_now
+      @user.send_activation_email
+      flash[:info] = t "flash.check_activate"
+      render "user_mailer/account_activation"
     else
       render :new
     end
@@ -58,6 +59,7 @@ class UsersController < ApplicationController
 
   def logged_in_user
     unless logged_in?
+      store_location
       flash[:danger] = t "flash.plaese_login"
       redirect_to login_url
     end

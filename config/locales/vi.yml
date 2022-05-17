@@ -12,6 +12,10 @@ vi:
     update_success: "Cập nhật thành công"
     plaese_login: "Hãy đăng nhập."
     user_del: "Đã xóa người dùng"
+    check_activate: "Hãy kiểm tra email của bạn để kích hoạt tài khoản của bạn."
+    account_not_activate: "Tài khoản chưa được kích hoạt. Kiểm tra email của bạn để biết liên kết kích hoạt."
+    acctive_succes: "Tài khoản đã kích hoạt!"
+    acctive_invalid: "Đường dẫn kích hoạt không hợp lệ"
   error:
     contains: "Biểu mẫu chứa"
     errors: "lỗi"
@@ -76,3 +80,8 @@ vi:
       new_user: "Tài khoản mới?"
       sign_up_now: "Đăng ký ngay!"
       remember_me: "Nhớ tài khoản của tôi"
+  user_mailer:
+    account_activate:
+      activate: "Kích hoạt"
+      hi: "Chào "
+      content: "Chào mừng bạn đến với Ứng dụng mẫu! Nhấp vào liên kết bên dưới để kích hoạt tài khoản của bạn:"
