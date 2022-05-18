@@ -6,6 +6,7 @@ vi:
     eng: "EN"
     vie: "VI"
     rails_tutorial: "Ruby on Rails Tutorial"
+    submit: "Gửi"
   flash:
     signup_success: "Tạo tài khoản thành công"
     email_password_invalid: "Email/mật khẩu không hợp lệ"
@@ -16,6 +17,8 @@ vi:
     account_not_activate: "Tài khoản chưa được kích hoạt. Kiểm tra email của bạn để biết liên kết kích hoạt."
     acctive_succes: "Tài khoản đã kích hoạt!"
     acctive_invalid: "Đường dẫn kích hoạt không hợp lệ"
+    email_not_found: "Không tìm thấy địa chỉ email"
+    notifi_send_email: "Email được gửi kèm theo hướng dẫn đặt lại mật khẩu"
   error:
     contains: "Biểu mẫu chứa"
     errors: "lỗi"
@@ -80,6 +83,7 @@ vi:
       new_user: "Tài khoản mới?"
       sign_up_now: "Đăng ký ngay!"
       remember_me: "Nhớ tài khoản của tôi"
+      fogot_password: "Quên mật khẩu"
   user_mailer:
     account_activate:
       activate: "Kích hoạt"
