@@ -1,5 +1,5 @@
 <% provide(:title, t("layout.footer.contact")) %>
 <h1><%= t("layout.footer.contact") %></h1>
 <p>
-  <%= t("static_page.contact.content", contact_page: link_to(t("static_page.contact.contact_page"),"https://www.railstutorial.org/contact")) %>
+  <%= t("static_page.contact.content", contact_page: link_to(t("static_page.contact.contact_page"),"https://www.railstutorial.org/contact")).html_safe %>
 </p>

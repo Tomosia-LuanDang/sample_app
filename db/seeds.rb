@@ -19,8 +19,16 @@ User.create!(name: "Luan Dang",
 end
 
 # Generate microposts for a subset of users.
-users = User.order(:created_at).take(6)
-  20.times do
-  content = Faker::Lorem.sentence(word_count: 5)
+users = User.order(:created_at)
+  3.times do
+  content = Faker::Lorem.sentence(word_count: 10)
   users.each { |user| user.microposts.create!(content: content) }
 end
+
+# Create following relationships.
+users = User.all
+user = users.first
+following = users[2..5]
+followers = users[2..20]
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }
