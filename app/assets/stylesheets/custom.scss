@@ -1,3 +1,6 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 $gray-medium-light: #eaeaea;
 $color-h2-general: #777;
 $color-a-general: #A9A9A9;
@@ -12,6 +15,10 @@ $state-danger-text: rgb(250, 49, 49);
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.body-container {
+  margin-top: 80px;
 }
 
 /* miscellaneous */

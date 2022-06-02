@@ -5,6 +5,7 @@ en:
     rails_tutorial: "Ruby on Rails Tutorial"
   flash:
     signup_success: "Create Account Success"
+    email_password_invalid: "Invalid email/password combination"
   error:
     contains: "The form contains"
     errors: "error"
@@ -13,6 +14,10 @@ en:
       home: "Home"
       help: "Help"
       login: "Login"
+      logout: "Log out"
+      profile: "Profile"
+      setting: "Setting"
+      account: "Account"
       sample_app: "Sample App"
       base_title: " | Ruby on Rails Tutorial Sample App"
     footer:
@@ -49,3 +54,5 @@ en:
       signup: "Sign up"
       confirmination: "Confirmation"
       create_acc: "Create my account"
+      new_user: "New User?"
+      sign_up_now: "Sign up now!"

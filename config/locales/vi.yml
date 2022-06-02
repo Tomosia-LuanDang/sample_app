@@ -5,6 +5,7 @@ vi:
     rails_tutorial: "Ruby on Rails Tutorial"
   flash:
     signup_success: "Tạo tài khoản thành công"
+    email_password_invalid: "Email/mật khẩu không hợp lệ"
     errors: "lỗi"
   error:
     contains: "Biểu mẫu chứa"
@@ -13,7 +14,11 @@ vi:
       home: "Trang chủ"
       help: "Hỗ trợ"
       login: "Đăng nhập"
-      sample_app: "Ứng dụng mẫu"
+      logout: "Đăng xuất"
+      profile: "Hồ sơ"
+      setting: "Cài đặt"
+      account: "Tài khoản"
+      sample_app: "Sample App"
       base_title: " | Ruby on Rails Tutorial Sample App"
     footer:
       about: "Giới thiệu"
@@ -49,3 +54,5 @@ vi:
       signup: "Đăng ký"
       confirmination: "Xác nhận"
       create_acc: "Tạo tài khoản của tôi"
+      new_user: "Tài khoản mới?"
+      sign_up_now: "Đăng ký ngay!"
